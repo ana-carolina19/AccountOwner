@@ -14,3 +14,7 @@ git add .
 git commit -m "Criação da estrutura de pasta, da solução e do projeto WebApi do backend"
 git status
 git push
+
+/* Criar um projeto de bibliotca de classe */
+/* Tem que estar na pasta backend */
+dotnet new classlib --name Contracts -f net6.0
