@@ -18,3 +18,20 @@ git push
 /* Criar um projeto de bibliotca de classe */
 /* Tem que estar na pasta backend */
 dotnet new classlib --name Contracts -f net6.0
+dotnet sln Contracts\Contracts.csproj 
+
+/* Tem que estar na pasta backend */
+dotnet new classlib --name LoggerService -f net6.0
+dotnet sln add LoggerService\LoggerService.csproj
+
+/* Adicionando referência do LoggerService na API */
+dotnet add AccountOwnerServer\AccountOwnerServer.csproj reference LoggerService\LoggerService.csproj
+
+/* Adicionando referência do Contracts no LoggerService */
+dotnet add LoggerService\LoggerService.csproj reference Contracts\Contracts.csproj
+
+/* Acessar a pasta LoggerService */
+cd LoggerService
+
+/* Instalando o pacote NLog */
+dotnet add package NLog.Extensions.Logging --version 5.2.1
