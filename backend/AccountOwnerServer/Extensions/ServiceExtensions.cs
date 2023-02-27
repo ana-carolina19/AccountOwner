@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Contracts;
+using LoggerService;
 
 namespace AccountOwnerServer.Extensions
 {
@@ -23,6 +21,11 @@ namespace AccountOwnerServer.Extensions
             services.Configure<IISOptions>(options => 
             {
             });
+        }
+
+        public static void ConfigureLoggerService(this IServiceCollection services)
+        {
+            services.AddSingleton<ILoggerManager, LoggerManager>();
         }
     }
 }
