@@ -16,7 +16,7 @@ public class Account
     public string? AccountType { get; set; }
 
     [ForeignKey(nameof(Owner))]
-    public Guid OwnerI {get; set; }
+    public Guid OwnerId {get; set; }
     public Owner? Owner { get; set; }
 
 }
