@@ -5,14 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit
-{
-    public homeText: string;
+export class HomeComponent implements OnInit {
 
-    constructor() {}
+  public homeText: string;
 
-    ngOnInit(): void {
+  constructor() {}
+    ngOnInit(): void{
       this.homeText = "BEM VINDO A APLICAÇÃO ACCOUNT-OWNER";
-    }
-
+  }
 }
+
