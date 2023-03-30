@@ -13,3 +13,4 @@ namespace LoggerService
         public void LogInfo(string message) => logger.Info(message);
     }
 }
+.
