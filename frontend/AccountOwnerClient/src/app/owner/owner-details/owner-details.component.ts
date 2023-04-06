@@ -26,8 +26,12 @@ export class OwnerDetailsComponent implements OnInit {
     const apiUrl: string = `api/owner/${id}/account`;
 
     this.repository.getOwner(apiUrl)
-    .subscribe({})
-    
+    .subscribe({
+      next: (own: Owner) => this.owner = own,
+      error: (err: HttpErrorResponse) => {
+        this.errorHandler.handleError(err);
+        this.errorMessage = this.errorHandler.errorMessage;
+      }
+    })
   }
-  
 }
