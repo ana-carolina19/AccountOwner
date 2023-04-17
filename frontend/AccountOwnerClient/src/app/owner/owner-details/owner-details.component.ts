@@ -4,6 +4,7 @@ import { Owner } from '../../_interfaces/owner.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OwnerRepositoryService } from '../../shared/services/owner-repository.service';
 import { ErrorHandlerService } from '../../shared/services/error-handler.service';
+import { Account } from 'src/app/_interfaces/account.model';
 
 @Component({
   selector: 'app-owner-details',
@@ -34,4 +35,9 @@ export class OwnerDetailsComponent implements OnInit {
       }
     })
   }
+
+  printToConsole = (param: Account) => {
+    console.log('Account parameter from the child component', param)
+  }
+
 }
