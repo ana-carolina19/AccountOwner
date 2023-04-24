@@ -10,6 +10,11 @@ import { SuccessModalComponent } from "src/app/shared/modals/success-modal/succe
 import { ErrorHandlerService } from "src/app/shared/services/error-handler.service";
 import { OwnerRepositoryService } from "src/app/shared/services/owner-repository.service";
 
+@Component({
+  selector: 'app-owner-create',
+  templateUrl: './owner-create.component.html',
+  styleUrls: ['./owner-create.component.css']
+})
 export class OwnerCreateComponent implements OnInit {
   errorMessage: string;
   ownerForm: FormGroup;

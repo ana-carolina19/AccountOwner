@@ -9,9 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
-import { OwnerModule } from './owner/owner.module';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { DatePipe } from '@angular/common';
+import { OwnerModule } from './owner/owner.module';
 
 @NgModule({
   declarations: [
