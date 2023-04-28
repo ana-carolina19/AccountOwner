@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { OwnerUpdateComponent } from './owner-update/owner-update.component';
 import { OwnerCreateComponent } from './owner-create/owner-create.component';
+import { OwnerDeleteComponent } from './owner-delete/owner-delete.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { OwnerCreateComponent } from './owner-create/owner-create.component';
     OwnerDetailsComponent,
     OwnerAccountsComponent,
     OwnerCreateComponent,
-    OwnerUpdateComponent
+    OwnerUpdateComponent,
+    OwnerDeleteComponent
   ],
   imports: [
     CommonModule,
